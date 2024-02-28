@@ -170,11 +170,13 @@
     gap: 30px;
     grid-template-rows: .3fr 1fr 1fr 2fr;
   }
-  .admin-dash div{
+  .admin-dash>div{
     border-radius: 10px;
     box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.052);
   }
-
+.bg-none{
+  background: transparent;
+}
   .admin-dash >div:nth-last-of-type(1){
     grid-column: 1/2;
     grid-row: 1/5;
@@ -194,4 +196,14 @@
   .admin-dash >div:nth-last-of-type(7){
     grid-column: 2/4;
     grid-row: 4/5;
+  }
+
+  .photo{
+    height: 25px;
+    width: 25px;
+  }
+
+  .photo img{
+     height: 100%;
+    object-fit: contain;
   }
