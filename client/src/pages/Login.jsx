@@ -1,11 +1,18 @@
 import React, { useState } from "react";
 import Input from "../components/Input";
 import { motion } from "framer-motion";
+import Spinner from '../assets/Spinner.svg'
 const Login = () => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [usernameError, setUsernameError] = useState('')
   const [passwordError, setPasswordError] = useState('')
+  const [loading, setLoading] = useState(false)
+
+
+  const handleSubmit=()=>{
+    setLoading(true)
+  }
   return (
     <motion.div className="full-page bg-palewhite flex-column py-3  d-flex align-items-center justify-content-center">
       <motion.div
@@ -36,8 +43,17 @@ const Login = () => {
           error_msg={passwordError && passwordError}
           onFocus={()=>setPasswordError('password must have atleast 8 characters')}
         />
-        <button className="btn btn-primary px-5 py-1 linear-gradient border-0">
-          Log in
+        <button onClick={handleSubmit} className="btn btn-primary px-5 py-1 linear-gradient border-0">
+          {
+            loading
+            ?
+            <>
+            <span className="mx-2 opacity-50">Verifying..</span>
+            <img className="icon-sm" src={Spinner}/>
+            </>
+            : 
+            <span>Log in</span>
+          }
         </button>
         <p className="py-3 text-secondary">Forgot password</p>
         <p className="">
