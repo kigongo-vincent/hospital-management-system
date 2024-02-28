@@ -1,6 +1,9 @@
 .splash-screen img{
     width: 20vw;
 }
+.icon-large{
+  height: 20vh;
+}
 .full-page{
     width: 100vw;
     height: 100vh;
@@ -118,4 +121,42 @@
     font-weight: 900;
     font-style: italic;
   }
-  
+  .overflow-hidden{
+    overflow: hidden;
+  }
+  .bg-white{
+    background-color: white;
+  }
+  .bg-palewhite{
+    background-color: #f3f6ff;
+  }
+
+  .auth-page{
+    height: 80vh;
+    width: 35vw;
+  }
+  .bg-purple{
+    background-color: #ad21fd;
+  }
+  .input-custom input{
+    outline: none;
+    border: 1px solid rgba(0,0,0,.4);
+  }
+  .input-custom input:focus{
+    border-color: #ad21fd;
+    color: #ad21fd;
+  }
+
+  .linear-gradient{
+    background: linear-gradient(120deg, #007aff, #c640fe);
+  }
+
+  .text-purple{
+    color:#ad21fd;
+  }
+.error{
+  color: #d30000;
+}
+  :not(h1, h2, h3, h4, h5){
+    font-size: 14px;
+  }
